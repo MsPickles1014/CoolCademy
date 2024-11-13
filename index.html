@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alphabet Learning App</title>
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-    <!-- Link to your CSS file -->
-    <script src="./Assets/script.js" defer></script>
-    <!-- Link to your JavaScript file -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Learn the Alphabet!</h1>
-    </header>
-    <main>
-      <!-- <div class="card" id="letterA" onclick="flipCard('A')">A</div>
-        <div id="imageContainer" style="display:none;">
-            <img src="./Assets/css/Images/Red_Apple.jpg" id="imageA" alt="Apple"/>
-            <input type="text" id="inputA" placeholder="Type the name..." />
-            <button onclick="checkAnswer('apple', 'inputA')">Submit</button>
-            <div id="feedbackA"></div>
-        </div>
-        <div class="card" id="letterB" onclick="flipCard('B')">B</div>
-        <div id="imageContainer" style="display:none;">
-            <img src="#" id="imageA" alt="#"/>
-            <input type="text" id="inputB" placeholder="Type the name..." />
-            <button onclick="checkAnswer('Banana', 'inputB')">Submit</button>
-            <div id="feedbackB"></div>
-        </div> -->
-        <section id="cardSection">
-      <div id="cardAF" class="card cardFront" style="width: 18rem">
-        <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-            <p>A is for <br> 
-            Apple 
-            Girrafe
-            Car
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alphabet Learning App</title>
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <!-- Link to your CSS file -->
+  <script src="./Assets/script.js" defer></script>
+  <!-- Link to your JavaScript file -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Learn the Alphabet!</h1>
+  </header>
+  <main>
+    <div id="cardSection" class="container">
+      <div class="row">
+        <!--Card A start-->
+        <div id="cardAF" class="card cardFront col">
+          <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p>A is for <br>
+              Apple
+              Girrafe
+              Car
             </p>
-        <form id="">
-            <dialog>
-        </form>
-
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button id="buttonA" class="btn btn-primary" data-toggle="modal" data-target="#modalA">Go somewhere</button>
+          </div>
         </div>
-      </div>
+        <!--Card A end-->
 
-      <div id="cardAB" class="card cardBack" style="width: 18rem">
-        <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!--Card A Modal start-->
+        <div id="modalA" class="modal fade" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <h5 class="modal-title" id="modalLabelA">Letter A</h5>
+              <div class="modal-body">What is this?
+                <input id="inputA"></input>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="submitA" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <!--Card A Modal end-->
 
 
 
+  </main>
+  <footer>
+    <p>2024 CodeCademy Alphabet Learning App</p>
+  </footer>
 
-      <div id="cardB" class="card" style="width: 18rem">
-        <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </section>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="./Assets/jscript/script.js"></script>
+</body>
 
-
-
-      <!-- Add more letter cards  -->
-    </main>
-    <footer>
-      <p>&copy; 2024 CodeCademy Alphabet Learning App</p>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous">
-    </script>
-    <script
-    src="./Assets/jscript/script.js">
-    </script>
-
-  </body>
 </html>
