@@ -9,9 +9,10 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="pageLoad()"> <!-- added an onload function to load cards from local storage -->
   <header class="text-center py-4">
     <h1>Learn the Alphabet!</h1>
+    <button class="btn btn-secondary" id="clear">Clear</button>
     <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#inputModal">Enter a Letter</button>
   </header>
 
