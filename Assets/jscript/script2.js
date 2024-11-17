@@ -59,17 +59,32 @@ clearButton.addEventListener('click', function (event) {
 
 // Alphabet data with words and images
 const alphabet = {
-  A: {
-    words: ["Apple", "Ant", "Alligator"],
-    img: "./Assets/images/apple.jpg",
-  },
+  A: { words: ["Apple", "Ant", "Alligator"], img: "./Assets/images/apple.jpg" },
+  B: { words: ["", "", ""], img: "./Assets/images/" },
+  C: { words: ["Cat", "Car", "Choo-choo-train"], img: "./Assets/images/choo-choo-train.jpg" },
+  D: { words: ["", "", ""], img: "./Assets/images/" },
+  E: { words: ["", "", ""], img: "./Assets/images/" },
   F: { words: ["Farmer", "Farm", "Fence"], img: "./Assets/images/farm.jpg" },
-  C: {
-    words: ["Cat", "Car", "Choo-choo-train"],
-    img: "./Assets/images/choo-choo-train.jpg",
-  },
-  // ... add entries up to Z
-  G: { words: ["guitar", "goat", "gift"], img: "./Assets/images/guitar.jpg" },
+  G: { words: ["Guitar", "Goat", "Gift"], img: "./Assets/images/guitar.jpg" },
+  H: { words: ["", "", ""], img: "./Assets/images/" },
+  I: { words: ["", "", ""], img: "./Assets/images/" },
+  J: { words: ["", "", ""], img: "./Assets/images/" },
+  K: { words: ["", "", ""], img: "./Assets/images/" },
+  L: { words: ["", "", ""], img: "./Assets/images/" },
+  M: { words: ["", "", ""], img: "./Assets/images/" },
+  N: { words: ["", "", ""], img: "./Assets/images/" },
+  O: { words: ["", "", ""], img: "./Assets/images/" },
+  P: { words: ["", "", ""], img: "./Assets/images/" },
+  Q: { words: ["", "", ""], img: "./Assets/images/" },
+  R: { words: ["", "", ""], img: "./Assets/images/" },
+  S: { words: ["", "", ""], img: "./Assets/images/" },
+  T: { words: ["", "", ""], img: "./Assets/images/" },
+  U: { words: ["", "", ""], img: "./Assets/images/" },
+  V: { words: ["", "", ""], img: "./Assets/images/" },
+  W: { words: ["", "", ""], img: "./Assets/images/" },
+  X: { words: ["", "", ""], img: "./Assets/images/" },
+  Y: { words: ["", "", ""], img: "./Assets/images/" },
+  Z: { words: ["", "", ""], img: "./Assets/images/" }, 
 };
 
 // Function to generate and append a new card
