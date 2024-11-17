@@ -1,6 +1,7 @@
 // store user input(letter of the alphabet) in local storage
-//check local storage for current letter.
-//if letter already exhist, display alert to user to select another letter
+//Save Card to localStorage:(every time a new card is generated with function generateCard , the saveCardToLocalStorage function is called.)
+//check local storage for current letter = checks if the letter is already saved in localStorage. If not, it adds it to the array and updates localStorage.
+//if letter already exhist, display alert to user to select another letter***** (completed Already- was added to generate card function as an if statement )
 
 //gonna write some functions here that:
 // will be run on page load
@@ -117,19 +118,3 @@ function generateCard(letter) {
 document.getElementById("submitLetter").addEventListener("click", () => {
   const letterInput = document.getElementById("letterInput").value;
   
-  if (readLocalStorage().includes(letterInput.toUpperCase())) {
-    alert("The card for '" + letterInput.toUpperCase() + "' is already displayed.");
-    return;
-  }
-
-  storeLetter(letterInput);
-
-  if (!/^[a-zA-Z]$/.test(letterInput)) {
-    alert("Please enter a single letter from A to Z.");
-    return;
-  }
-  generateCard(letterInput);
-  $("#inputModal").modal("hide"); // Hide modal after submitting
-  document.getElementById("letterInput").value = ""; // Clear input field
-});
-// });
