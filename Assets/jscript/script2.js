@@ -1,6 +1,7 @@
 // store user input(letter of the alphabet) in local storage
-//check local storage for current letter.
-//if letter already exhist, display alert to user to select another letter
+//Save Card to localStorage:(every time a new card is generated with function generateCard , the saveCardToLocalStorage function is called.)
+//check local storage for current letter = checks if the letter is already saved in localStorage. If not, it adds it to the array and updates localStorage.
+//if letter already exhist, display alert to user to select another letter***** (completed Already- was added to generate card function as an if statement )
 
 
 
@@ -72,3 +73,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+
+
+  // // Load cards from localStorage on page load
+  // loadStoredCards();
+  
+  // // Function to generate and append a new card
+  // function generateCard(letter) {
+  //   const uppercaseLetter = letter.toUpperCase();
+  //   const item = alphabet[uppercaseLetter];
+  //   if (!item) {
+  //     alert("Invalid letter! Please enter a letter from A to Z.");
+  //     return;
+  //   }
+
+  //   // Check if the card for this letter already exists
+  //   if (document.getElementById(`card-${uppercaseLetter}`)) {
+  //     alert(`The card for "${uppercaseLetter}" is already displayed.`);
+  //     return;
+    // }
