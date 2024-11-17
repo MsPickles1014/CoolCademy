@@ -23,12 +23,9 @@
         <div id="cardAF" class="card cardFront col">
           <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <p>A is for <br>
-              Apple
-              Girrafe
-              Car
+            <p>A is for:
             </p>
-            <button id="buttonA" class="btn btn-primary" data-toggle="modal" data-target="#modalA">Go somewhere</button>
+            <button id="buttonA" cardnum="A" class="btn btn-primary" data-toggle="modal" data-target="#modalA" onclick="checkResult()">Click Here</button>
           </div>
         </div>
         <!--Card A end-->
@@ -39,11 +36,23 @@
             <div class="modal-content">
               <h5 class="modal-title" id="modalLabelA">Letter A</h5>
               <div class="modal-body">What is this?
-                <input id="inputA"></input>
+               <!--- <input id="inputA"></input> -->
+               <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Choose Below
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item incorrect">Car</a>
+                  <a class="dropdown-item incorrect">Giraffe</a>
+                  <a class="dropdown-item correct">Apple</a>
+                </div>
+              </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id="submitA" class="btn btn-primary">Submit</button>
+                <p id="errorA"></p>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                <!-- <button type="button" id="submitA" class="btn btn-primary">Submit</button> -->
+
               </div>
             </div>
           </div>
