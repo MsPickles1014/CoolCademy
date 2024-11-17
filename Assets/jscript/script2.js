@@ -59,17 +59,32 @@ clearButton.addEventListener('click', function (event) {
 
 // Alphabet data with words and images
 const alphabet = {
-  A: {
-    words: ["Apple", "Ant", "Alligator"],
-    img: "./Assets/images/apple.jpg",
-  },
+  A: { words: ["Apple", "Ant", "Alligator"], img: "./Assets/images/apple.jpg" },
+  B: { words: ["", "", ""], img: "" },
+  C: { words: ["Cat", "Car", "Choo-choo-train"], img: "./Assets/images/choo-choo-train.jpg" },
+  D: { words: ["", "", ""], img: "" },
+  E: { words: ["", "", ""], img: "" },
   F: { words: ["Farmer", "Farm", "Fence"], img: "./Assets/images/farm.jpg" },
-  C: {
-    words: ["Cat", "Car", "Choo-choo-train"],
-    img: "./Assets/images/choo-choo-train.jpg",
-  },
-  // ... add entries up to Z
-  G: { words: ["guitar", "goat", "gift"], img: "./Assets/images/guitar.jpg" },
+  G: { words: ["Guitar", "Goat", "Gift"], img: "./Assets/images/guitar.jpg" },
+  H: { words: ["", "", ""], img: "" },
+  I: { words: ["", "", ""], img: "" },
+  J: { words: ["", "", ""], img: "" },
+  K: { words: ["", "", ""], img: "" },
+  L: { words: ["", "", ""], img: "" },
+  M: { words: ["", "", ""], img: "" },
+  N: { words: ["", "", ""], img: "" },
+  O: { words: ["", "", ""], img: "" },
+  P: { words: ["", "", ""], img: "" },
+  Q: { words: ["", "", ""], img: "" },
+  R: { words: ["", "", ""], img: "" },
+  S: { words: ["", "", ""], img: "" },
+  T: { words: ["", "", ""], img: "" },
+  U: { words: ["", "", ""], img: "" },
+  V: { words: ["", "", ""], img: "" },
+  W: { words: ["", "", ""], img: "" },
+  X: { words: ["", "", ""], img: "" },
+  Y: { words: ["", "", ""], img: "" },
+  Z: { words: ["", "", ""], img: "" }, 
 };
 
 // Function to generate and append a new card
