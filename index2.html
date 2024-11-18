@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="./Assets/css/style2.css" />
   <script src="./Assets/jscript/script2.js" defer></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!--  integrating both the audio and  page load functionality:adds user controls and audio loop continuously -->
+  <audio id="audioPlayer" src="./Assets/audio/game-music-loop-6-144641.mp3" preload="auto" controls loop ></audio>
 </head>
 
 <body onload="pageLoad()"> <!-- added an onload function to load cards from local storage -->
-  <header class="text-center py-4">
-    <h1>Learn the Alphabet!</h1>
-    <button class="btn btn-secondary" id="clear">Clear</button>
+   <div id="header-image"> 
+       <img src="./Assets/images/choo-choo-train.jpg" style="width: 450px; height: 300px;">
+       <img src="./Assets/images/choo-choo-train.jpg" style="width: 450px; height: 300px;">
+       <img src="./Assets/images/choo-choo-train.jpg" style="width: 450px; height: 300px;">
+       </div><header class="text-center py-4">
+    <h1>Learn the Alphabet!
+     
+   
+    </h1>
+  
+    <button class="btn btn-secondary" id="clear">PLAY AGAIN!</button>
     <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#inputModal">Enter a Letter</button>
   </header>
 
@@ -20,7 +30,6 @@
       <div class="row" id="alphabetCards">
       <!-- Cards will be dynamically injected here -->
       </div>
-    
     
   </main>
 
@@ -46,7 +55,7 @@
     </div>
   </section>
 <footer>
- <h4>Copyright 2024 CoolCademy </h4> 
+ <h6>Copyright 2024 CoolCademy </h6> 
  
 </footer>
   <!-- Bootstrap and jQuery Scripts -->

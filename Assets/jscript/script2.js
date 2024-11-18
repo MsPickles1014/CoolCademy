@@ -1,38 +1,46 @@
-// store user input(letter of the alphabet) in local storage
-//check local storage for current letter.
-//if letter already exhist, display alert to user to select another letter
-
-//gonna write some functions here that:
-// will be run on page load
-// will check local storage, then run the generate card function over a loop through local storage
-//
-// a seperate function that links to a "clear button" to clear local storage and the cards currently out
+//JavaScript
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the audio player by its ID
+  const audioPlayer = document.getElementById('audioPlayer');
+  
+  // Check if the audio element is available
+  if (audioPlayer) {
+    // Play the audio
+    audioPlayer.play().catch(function(error) {
+      // Handle any errors (e.g., if autoplay is blocked in browsers)
+      console.log("Audio play error: " + error);
+    });
+  }
+});
 
 const clearButton = document.getElementById('clear');
+// Function stores the entered letter into local storage
 
-
-
-//function stores the entered letter into local storage
 function storeLetter(enteredLetter) {
-  //this is one way to prevent having [a, A], and the Alphabet dictionary below uses uppercase keys
+  // Convert letter to uppercase for consistency
   enteredLetter = enteredLetter.toUpperCase();
+
+  // Retrieve the letters array from local storage 
   let lettersArray = JSON.parse(localStorage.getItem("lettersArray"));
-  // here we check if the array exists - if it doesn't we create an empty array
+
+  // If array doesn't exhist, we create an empty array
   if (!lettersArray) {
     lettersArray = [];
   }
-  //if we get here, we know the array exists, so we can check if the entered letter is in the array, if not we push the entered letter
+
+  // If the entered letter is not already in the array, add it
   if (!lettersArray.includes(enteredLetter)) {
     lettersArray.push(enteredLetter);
+    localStorage.setItem("lettersArray", JSON.stringify(lettersArray));
+   }
   }
-  //store the array as a string in local storage
-  localStorage.setItem("lettersArray", JSON.stringify(lettersArray));
-}
 
+  // Function to read the letters from local storage
 function readLocalStorage() {
   let letters = JSON.parse(localStorage.getItem("lettersArray"));
   if (letters) {
-    //create an array from the letters in local storage
+    //create an array from the letters in local storage 
+    // (***could have also used this code: ===> return letters ? letters : [];  <===***)
     letters = Array.from(letters);
     return letters;
   } else {
@@ -59,79 +67,152 @@ clearButton.addEventListener('click', function (event) {
 
 // Alphabet data with words and images
 const alphabet = {
-  A: { words: ["Apple", "Ant", "Alligator"], img: "./Assets/images/apple.jpg" },
-  B: { words: ["", "", ""], img: "./Assets/images/" },
-  C: { words: ["Cat", "Car", "Choo-choo-train"], img: "./Assets/images/choo-choo-train.jpg" },
-  D: { words: ["", "", ""], img: "./Assets/images/" },
-  E: { words: ["", "", ""], img: "./Assets/images/" },
-  F: { words: ["Farmer", "Farm", "Fence"], img: "./Assets/images/farm.jpg" },
-  G: { words: ["Guitar", "Goat", "Gift"], img: "./Assets/images/guitar.jpg" },
-  H: { words: ["", "", ""], img: "./Assets/images/" },
-  I: { words: ["", "", ""], img: "./Assets/images/" },
-  J: { words: ["", "", ""], img: "./Assets/images/" },
-  K: { words: ["", "", ""], img: "./Assets/images/" },
-  L: { words: ["", "", ""], img: "./Assets/images/" },
-  M: { words: ["", "", ""], img: "./Assets/images/" },
-  N: { words: ["", "", ""], img: "./Assets/images/" },
-  O: { words: ["", "", ""], img: "./Assets/images/" },
-  P: { words: ["", "", ""], img: "./Assets/images/" },
-  Q: { words: ["", "", ""], img: "./Assets/images/" },
-  R: { words: ["", "", ""], img: "./Assets/images/" },
-  S: { words: ["", "", ""], img: "./Assets/images/" },
-  T: { words: ["", "", ""], img: "./Assets/images/" },
-  U: { words: ["", "", ""], img: "./Assets/images/" },
-  V: { words: ["", "", ""], img: "./Assets/images/" },
-  W: { words: ["", "", ""], img: "./Assets/images/" },
-  X: { words: ["", "", ""], img: "./Assets/images/" },
-  Y: { words: ["", "", ""], img: "./Assets/images/" },
-  Z: { words: ["", "", ""], img: "./Assets/images/" }, 
+  A: { words: [""], img: "./Assets/images/Letter A.jpg" },
+  B: { words: [""], img: "./Assets/images/Animal B.jpg" },
+  C: { words: [""], img: "./Assets/images/Letter C.jpg" },
+  D: { words: [""], img: "./Assets/images/Animal D.jpg" },
+  E: { words: [""], img: "./Assets/images/Animal E.jpg" },
+  F: { words: [""], img: "./Assets/images/Animal F.jpg" },
+  G: { words: [""], img: "./Assets/images/Letter G.jpg" },
+  H: { words: [""], img: "./Assets/images/Animal H.jpg" },
+  I: { words: [""], img: "./Assets/images/Animal I.jpg" },
+  J: { words: [""], img: "./Assets/images/Animal J.jpg" },
+  K: { words: [""], img: "./Assets/images/Animal k.jpg" },
+  L: { words: [""], img: "./Assets/images/Animal L.jpg" },
+  M: { words: [""], img: "./Assets/images/Animal M.jpg" },
+  N: { words: [""], img: "./Assets/images/Letter N.jpg" },
+  O: { words: [""], img: "./Assets/images/Letter O.jpg" },
+  P: { words: [""], img: "./Assets/images/Animal P.jpg" },
+  Q: { words: [""], img: "./Assets/images/Letter Q.jpg" },
+  R: { words: [""], img: "./Assets/images/Animal R.jpg" },
+  S: { words: [""], img: "./Assets/images/Letter S.jpg" },
+  T: { words: [""], img: "./Assets/images/Animal T.jpg" },
+  U: { words: [""], img: "./Assets/images/Letter U.jpg" },
+  V: { words: [""], img: "./Assets/images/Animal V.jpg" },
+  W: { words: [""], img: "./Assets/images/Letter W.jpg" },
+  X: { words: [""], img: "./Assets/images/Animal X.jpg" },
+  Y: { words: [""], img: "./Assets/images/Letter Y.jpg" },
+  Z: { words: [""], img: "./Assets/images/Animal Z.jpg" },
 };
 
+
+const alphabetBack = {
+  A: { words: [""], img: "./Assets/images/Animal A.jpg" },
+  B: { words: [""], img: "./Assets/images/Letter B.jpg" },
+  C: { words: [""], img: "./Assets/images/Animal C.jpg" },
+  D: { words: [""], img: "./Assets/images/Letter D.jpg" },
+  E: { words: [""], img: "./Assets/images/Letter E.jpg" },
+  F: { words: [""], img: "./Assets/images/Letter F.jpg" },
+  G: { words: [""], img: "./Assets/images/Animal G.jpg" },
+  H: { words: [""], img: "./Assets/images/Letter H.jpg" },
+  I: { words: [""], img: "./Assets/images/Letter I.jpg" },
+  J: { words: [""], img: "./Assets/images/Letter J.jpg" },
+  K: { words: [""], img: "./Assets/images/Letter k.jpg" },
+  L: { words: [""], img: "./Assets/images/Letter L.jpg" },
+  M: { words: [""], img: "./Assets/images/Letter M.jpg" },
+  N: { words: [""], img: "./Assets/images/Animal N.jpg" },
+  O: { words: [""], img: "./Assets/images/Animal O.jpg" },
+  P: { words: [""], img: "./Assets/images/Letter P.jpg" },
+  Q: { words: [""], img: "./Assets/images/Animal Q.jpg" },
+  R: { words: [""], img: "./Assets/images/Letter R.jpg" },
+  S: { words: [""], img: "./Assets/images/Animal S.jpg" },
+  T: { words: [""], img: "./Assets/images/Letter T.jpg" },
+  U: { words: [""], img: "./Assets/images/Animal U.jpg" },
+  V: { words: [""], img: "./Assets/images/Letter V.jpg" },
+  W: { words: [""], img: "./Assets/images/Animal W.jpg" },
+  X: { words: [""], img: "./Assets/images/Letter X.jpg" },
+  Y: { words: [""], img: "./Assets/images/Animal Y.jpg" },
+  Z: { words: [""], img: "./Assets/images/Letter Z.jpg" },
+};
 // Function to generate and append a new card
 function generateCard(letter) {
   const uppercaseLetter = letter.toUpperCase();
-  const item = alphabet[uppercaseLetter];
-  if (!item) {
+  const itemFront = alphabet[uppercaseLetter];
+  
+  if (!itemFront) {
     alert("Invalid letter! Please enter a letter from A to Z.");
     return;
   }
 
   // Check if the card for this letter already exists
   //We already have this check in our code
-// Removed this line, moved it to under the submit area, and now have it check local storage
+  // Removed this line, moved it to under the submit area, and now have it check local storage
   // if (document.getElementById(`card-${uppercaseLetter}`)) {
   //   alert(`The card for "${uppercaseLetter}" is already displayed.`);
   //   return;
   // }
 
+// Check for an existing letter before submission: In your submitLetter event listener, 
+//you're checking if the letter exists in local storage, which is great. 
+//However, the storeLetter function is still adding the letter to the storage even if it already exists. 
+//So, you should prevent adding duplicate letters in storeLetter as well.
+
+  const existingCard = document.getElementById(`card-${uppercaseLetter}`);
+  if (existingCard) {
+  alert(`The card for "${uppercaseLetter}" is already displayed.`);
+  return;
+  }
+
+
+
+
+
   const cardSection = document.getElementById("alphabetCards");
 
-  // Create Bootstrap card HTML
+
+
+  // Create card HTML with front and back faces
   const cardHTML = `
-        <div id="card-${uppercaseLetter}" class="col-md-4 mb-4">
-          <div class="card">
-            <img src="${
-              item.img
-            }" class="card-img-top" alt="Image for ${uppercaseLetter}" />
-            <div class="card-body text-center">
-              <h5 class="card-title">${uppercaseLetter}</h5>
-              <p class="card-text">${uppercaseLetter} is for:</p>
-              <ul class="list-unstyled">
-                ${item.words.map((word) => `<li>${word}</li>`).join("")}
-              </ul>
-            </div>
+    <div id="card-${uppercaseLetter}" class="col-md-4 mb-4">
+      <div class="card-container">
+        <div class="card">
+          <!-- Front of the card -->
+          <div class="card-front">
+            <img src="${itemFront.img}" class="card-img-top" alt="Image for ${uppercaseLetter}" />
+          </div>
+          <!-- Back of the card -->
+          <div class="card-back">
+            <img src="${alphabetBack[uppercaseLetter].img}" class="card-img-top" alt="Back Image for ${uppercaseLetter}" />
+
+            <p class="card-text">${uppercaseLetter} is for:</p>
+            <ul class="list-unstyled">
+              ${itemFront.words.map((word) => `<li>${word}</li>`).join("")}
+            </ul>
           </div>
         </div>
-      `;
+      </div>
+    </div>
+  `;
+  // Create Bootstrap card HTML
+  // const cardHTML = `
+  //       <div id="card-${uppercaseLetter}" class="col-md-4 mb-4">
+  //         <div class="card">
+  //           <img src="${item.img
+  //   }" class="card-img-top" alt="Image for ${uppercaseLetter}" />
+  //           <div class="card-body text-center">
+  //             <h5 class="card-title">${uppercaseLetter}</h5>
+  //             <p class="card-text">${uppercaseLetter} is for:</p>
+  //             <ul class="list-unstyled">
+  //               ${item.words.map((word) => `<li>${word}</li>`).join("")}
+  //             </ul>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     `;
 
   // Append the new card to the card section
   cardSection.insertAdjacentHTML("beforeend", cardHTML);
+  
+  // // Apply custom styles to individual cards (Optional)
+  // const card = document.getElementById(`card-${uppercaseLetter}`);
+  // card.querySelector(".card").style.width = "350px"; // Custom width
+  // card.querySelector(".card").style.height = "200px"; // Custom height
 }
 
 // Handle letter submission
 document.getElementById("submitLetter").addEventListener("click", () => {
   const letterInput = document.getElementById("letterInput").value;
-  
+
   if (readLocalStorage().includes(letterInput.toUpperCase())) {
     alert("The card for '" + letterInput.toUpperCase() + "' is already displayed.");
     return;
