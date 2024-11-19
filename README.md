@@ -1,7 +1,7 @@
 # ReadMe
                               # CoolCademy Alphabet Learning App
 
-## Overview
+# Overview
 The Alphabet Learning App is an interactive, educational tool designed to help users learn the alphabet. The app allows users to input letters, 
 dynamically generates flashcards with images and text, and saves progress using local storage. It also includes background music, a modal interface, 
 and a "Play Again" feature for restarting the learning session.
