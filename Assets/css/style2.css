@@ -153,6 +153,7 @@ body {
     width: 300px; /* Default width */
     height: 320px; /* Default height */
     margin: 10px; /* Card spacing */
+    /* margin-top: 40px; */
   }
   
   .card img {
