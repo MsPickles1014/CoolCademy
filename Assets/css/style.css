@@ -1,13 +1,13 @@
 /* style.css */
 
 /* Overall page styling */
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-image: url("../images/choo-choo-train.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-color: #f8f9fa;
-}
+} */
   
   /* Header styling */
   header {
@@ -21,7 +21,7 @@ body {
   }
   
   header h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
   }
 
