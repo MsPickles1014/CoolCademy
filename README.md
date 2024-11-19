@@ -56,7 +56,7 @@ Input Letters: Click the "Enter a Letter" button to open the modal. Enter any le
 View Cards: The app generates a flashcard for the entered letter and displays it in the main area.
 Play Again: Click the "PLAY AGAIN!" button to clear all cards and restart.
 
-# This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
 
 # Acknowledgments
 Bootstrap: For responsive UI components.
