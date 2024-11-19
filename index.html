@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabet Learning App</title>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <script src="./Assets/script.js" defer></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--  integrating both the audio and  page load functionality:adds user controls and audio loop continuously -->
+    <audio
+      id="audioPlayer"
+      src="./Assets/audio/game-music-loop-6-144641.mp3"
+      preload="auto"
+      controls
+      loop
+    ></audio>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alphabet Learning App</title>
-  <link rel="stylesheet" href="./Assets/css/style.css" />
-  <!-- Link to your CSS file -->
-  <script src="./Assets/script.js" defer></script>
-  <!-- Link to your JavaScript file -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
+  <body onload="pageLoad()">
+    <!-- added an onload function to load cards from local storage -->
+    <div id="header-image">
+    <div id="hero">
+      <img
+        id="headerImage"
+        src="./Assets/images/choo-choo-train.jpg"
+        style="width: 450px; height: 300px"
+      />
+      </div>
+    </div>
+    <header class="text-center py-4">
+      <h1>Learn the Alphabet!</h1>
 
-<body>
-  <header>
-    <h1>Learn the Alphabet!</h1>
-  </header>
-  <main>
-    <div id="cardSection" class="container">
-      <div class="row">
-        <!--Card A start-->
-        <div id="cardAF" class="card cardFront col">
-          <img src="./Assets/images/OF16730.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <p>A is for <br>
-              Apple
-              Girrafe
-              Car
-            </p>
-            <button id="buttonA" class="btn btn-primary" data-toggle="modal" data-target="#modalA">Go somewhere</button>
+      <button class="btn btn-primary mt-3" id="clear">PLAY AGAIN!</button>
+      <button
+        class="btn btn-primary mt-3"
+        data-toggle="modal"
+        data-target="#inputModal"
+      >
+        Enter a Letter
+      </button>
+    </header>
+
+    <main class="container mt-5">
+      <div class="row" id="alphabetCards">
+        <!-- Cards will be dynamically injected here -->
+      </div>
+    </main>
+
+    <!-- Modal for User Letter Input -->
+    <section
+      id="inputModal"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="inputModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="inputModalLabel">Enter a Letter</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
+          <aside class="modal-body">
+            <label for="letterInput">Type any letter from A to Z:</label>
+            <input
+              id="letterInput"
+              type="text"
+              class="form-control"
+              maxlength="1"
+              placeholder="Enter a letter"
+            />
+          </aside>
+          <footer class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" id="submitLetter" class="btn btn-primary">
+              Submit
+            </button>
+          </footer>
         </div>
-        <!--Card A end-->
-
-        <!--Card A Modal start-->
-        <div id="modalA" class="modal fade" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <h5 class="modal-title" id="modalLabelA">Letter A</h5>
-              <div class="modal-body">What is this?
-                <input id="inputA"></input>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" id="submitA" class="btn btn-primary">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Card A Modal end-->
-
-
-
-  </main>
-  <footer>
-    <p>2024 CodeCademy Alphabet Learning App</p>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
-  <script src="./Assets/jscript/script.js"></script>
-</body>
-
+      </div>
+    </section>
+    <footer>
+      <h6>Copyright 2024 CoolCademy</h6>
+    </footer>
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

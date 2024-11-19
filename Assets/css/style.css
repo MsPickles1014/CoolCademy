@@ -21,6 +21,22 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
   }
+
+  .header-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .hero {
+    flex: auto;
+    padding: 10px;
+    margin: auto;
+    position: relative;
+  }
+
   /* footer {
 
     text-align:left;
@@ -153,7 +169,7 @@ body {
     width: 300px; /* Default width */
     height: 320px; /* Default height */
     margin: 10px; /* Card spacing */
-    /* margin-top: 40px; */
+    margin-top: 50px; /*Card bottom and top spacing */
   }
   
   .card img {
@@ -171,5 +187,7 @@ body {
     .card {
       width: 200px;
       height: 250px;
+      margin-top: 75px;
+      margin-bottom: 75px;
     }
   }
