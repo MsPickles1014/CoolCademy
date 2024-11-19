@@ -61,4 +61,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 Bootstrap: For responsive UI components.
 jQuery: For simplifying JavaScript DOM manipulation.
 FreeSound: For background audio.
-Collaborators: Noela Deane, Ben Cook,  Bryan Esslinger, Josh Kramer
+### Collaborators: Noela Deane, Ben Cook,  Bryan Esslinger, Josh Kramer
