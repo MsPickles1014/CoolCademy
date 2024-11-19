@@ -1,6 +1,5 @@
-# CoolCademy
 
-# Alphabet Learning App
+# CoolCademy Alphabet Learning App
 
 # Overview
 The Alphabet Learning App is an interactive, educational tool designed to help users learn the alphabet. The app allows users to input letters, 
