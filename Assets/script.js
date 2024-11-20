@@ -134,18 +134,7 @@ function generateCard(letter) {
     return;
   }
 
-  // Check if the card for this letter already exists
-  //We already have this check in our code
-  // Removed this line, moved it to under the submit area, and now have it check local storage
-  // if (document.getElementById(`card-${uppercaseLetter}`)) {
-  //   alert(`The card for "${uppercaseLetter}" is already displayed.`);
-  //   return;
-  // }
-
-// Check for an existing letter before submission: In your submitLetter event listener, 
-//you're checking if the letter exists in local storage, which is great. 
-//However, the storeLetter function is still adding the letter to the storage even if it already exists. 
-//So, you should prevent adding duplicate letters in storeLetter as well.
+  
 
   const existingCard = document.getElementById(`card-${uppercaseLetter}`);
   if (existingCard) {
