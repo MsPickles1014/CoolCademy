@@ -27,14 +27,24 @@
 
 
 
-  .headerBackground {
+  /* .headerBackground {
     background-color: #ffffff;
     background-image: url("../images/choo-choo-train.jpg");
     background-repeat: repeat;
     background-size:auto;
     background-position: center;
-  }
+  } */
 
+
+.train-image {
+  width: 185px;
+  height: 150px;
+border-style: solid;
+border-color: white;
+border-radius: 3.6rem
+
+
+}
 
   .hero {
     position: absolute;
@@ -189,10 +199,58 @@
   
   /* Make cards smaller on smaller screens */
   @media (max-width: 767px) {
+    /* Header Styling */
+    header {
+      padding: 10px;
+      font-size: 1.5rem;
+    }
+  
+    header h1 {
+      font-size: 2.5rem; /* Smaller header text */
+    }
+  
+    /* Card Adjustments */
     .card {
-      width: 200px;
-      height: 250px;
-      margin-top: 75px;
-      margin-bottom: 75px;
+      width: 90%; /* Make cards take up most of the width */
+      height: auto; /* Allow height to adjust automatically */
+      margin: 20px auto; /* Center cards with margin */
+    }
+
+
+    .train-image > img{
+      width: 100px;
+      height:100px 
+    }
+
+  .card-container > img {
+    width: 100px;
+    height:100px
+
+  }
+    .card img {
+      height: 150px; /* Reduce image height for mobile */
+    }
+  
+    .card-body {
+      padding: 10px;
+    }
+  
+    /* Footer Styling */
+    footer {
+      font-size: 1rem; /* Smaller text for footer */
+      padding: 10px;
+    }
+  
+    /* Modal Adjustments */
+    .modal-body input {
+      width: 100%; /* Full width input fields */
+      padding: 8px; /* Smaller padding for inputs */
+    }
+  
+    /* Center hero elements */
+    .hero {
+      position: static;
+      text-align: center;
+      margin: 20px 0;
     }
   }
